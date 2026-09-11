@@ -1,0 +1,11 @@
+<!doctype html>
+<html>
+<head>
+<title>Chat</title>
+</head>
+<body onLoad="window.jsonLabeltexts.getLabeltexts('return', '[% lang %]');">
+<p id="pReturn" />[% errortext %]</p>
+<a id="lnkReturn" href="AccountAction.pl?hidLang=[% lang %]&hidAction=[% action %]"></a>
+<script type="text/javascript" src="../js/LabelTextService.js"></script>
+</body>
+</html>
