@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>Chat</title>
+</head>
+<body onload="window.jsonLabeltexts.getLabeltexts('channels', '[% lang %]');window.jsonChannels.getChannels();">
+<div id="divChannels">
+</div>
+<form name="frmChannel" id="frmChannel" action="ChannelAction.pl" method="post">
+  <input type="hidden" name="hidAction" id="hidAction" value="insert"/>
+  <input type="hidden" name="hidLang" id="hidLang" value="[% lang %]"/>
+  <input type="hidden" name="hidAccountId" id="hidAccountId" value="[% accountid %]"/>
+  <input type="hidden" name="hidSid" id="hidSid" value="[% sid %]"/>
+  <label id="lblName" for="txtName"></label>
+  <input type="text" name="txtName" id="txtName"/>
+  <button type="button" name="cmdNewChannel" id="cmdNewChannel" onClick="window.jsonChannels.validate();"></button>
+</form>
+<a id="lnkLogout" href="AccountAction.pl?hidAction=logout&hidLang=[% lang %]&hidSid=[% sid %]"></a>
+<script type="text/javascript" src="../js/LabelTextService.js"></script>
+<script type="text/javascript" src="../js/ChannelService.js"></script>
+</body>
+</html>
